@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+/* 타이틀 애니메이션 */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #000000;
+}
+
+h1 {
+  margin-top: 300px;
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+}
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-60%);
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 5s steps(44) 1s 1 normal both,
+             blinkTextCursor 1000ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 10em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+/* ------------------------------------------------------ */
+
+/* 시작회면 버튼들 */
+.myButton{
+  text-align: center;
+  margin-top: -5%;
+  margin-bottom: 20%;
+}
+
+.button1 {
+  border: 15px #FFFFFF;
+  border-radius: 8px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 50px;
+  color: #000000;
+  font-family: 'Oswald', sans-serif;
+  background-color: #FFFFFF;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  animation: 15s anim-lineUp ease-out;
+}
+
+.button1:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  box-shadow: 0px 10px 10px #FFFFFF;
+  transform: translateY(-7px);
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/* -------------------------------------------------------------- */
+
+footer {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  color: #9FAABC;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 230px;
+  margin-bottom: 20px;
+}
