@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>I Project</title>
+  <link rel="stylesheet" , href="style.css">
+</head>
+
+
+<body>
+
+<div class="line-1 anim-typewriter">
+  <p>See your def!</p>
+</div>
+
+
+<div id="display">
+		<div id="loader">
+			<h4> Loading</h4>
+		</div>
+		<div id="allNames">
+		</div>
+		<div id="errorMessage">
+			<h2> Failed to get data. Please refresh </h2>
+		</div>
+	</div>
+
+	<script>
+		let allNamesElm = document.getElementById("allNames")
+		let loaderElm = document.getElementById("loader")
+		let errorMessageElm = document.getElementById("errorMessage")
+
+		function setErrorDisplay(){
+			loaderElm.style.display = "none"
+			allNamesElm.style.display = "none"
+			errorMessageElm.style.display = "block"
+		}
+
+		fetch("https://api.apispreadsheets.com/data/gbUWyijc7fhgj6N3/").then(res=>{
+			if (res.status === 200){
+				res.json().then(data=>{
+					const yourData = data["data"]
+					for(let i = 0; i < yourData.length; i++){
+						let rowInfo = yourData[i]
+
+						let rowInfoDiv = document.createElement("div")
+						rowInfoDiv.classList.add("full-name-row")
+
+						let rowName = document.createElement("h2")
+						let rowNameNode = document.createTextNode(rowInfo["full_name"])
+						rowName.appendChild(rowNameNode)
+						rowName.classList.add("full_name")
+
+						let rowWritten = document.createElement("h3")
+						let rowWrittenNode = document.createTextNode(rowInfo["message"])
+						rowWritten.appendChild(rowWrittenNode)
+						rowWritten.classList.add("message")
+
+						rowInfoDiv.appendChild(rowName)
+						rowInfoDiv.appendChild(rowWritten)
+
+						allNamesElm.appendChild(rowInfoDiv)
+
+					}
+
+					loaderElm.style.display = "none"
+					allNamesElm.style.display = "block"
+					errorMessageElm.style.display = "none"
+
+				}).catch(err => {
+					setErrorDisplay()
+				})
+			}
+			else{
+				setErrorDisplay()
+			}
+		}).catch(err =>{
+			setErrorDisplay()
+		})
+	</script>
+
+<br />
+<div class="myButton">
+  <button class="button button2" onclick="location.href='index4.html'">Artist Statement</button>
+</div>
+
+<footer>
+    © Hanbee Cho
+  </footer>
+
+</body>
+
+</html>
