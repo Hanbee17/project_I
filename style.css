@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-
 /* 타이틀 애니메이션 */
 html,
 body {
@@ -11,12 +10,14 @@ body {
   background-color: #000000;
 }
 
+/* front title */
 h1 {
   margin-top: 300px;
   font-family: 'Oswald', sans-serif;
   color: #ffffff;
   text-align: center;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
 }
 
 p {
@@ -25,60 +26,90 @@ p {
   font-family: 'Oswald', sans-serif;
   color: #ffffff;
   text-align: center;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-}
-
-h2 {
-  margin: auto;
-  font-size: 15px;
-  font-family: 'Oswald', sans-serif;
-  color: #ffffff;
   overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
 }
 
-h3 {
-  margin: auto;
-  font-size: 20px;
+/* main explanation */
+.exp {
+  margin-top: -200px;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 30px;
   font-family: 'Oswald', sans-serif;
-  color: #ffffff;
+  color: #E5E5E5;
+  text-align: center;
   overflow: hidden;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  animation: 8s anim-lineUp ease-out;
 }
 
+/* artist statement */
+.st {
+  margin-top: -50px;
+  padding-left: 350px;
+  padding-right: 350px;
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
+  color: ##E5E5E5;
+  text-align: center;
+  overflow: hidden;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  animation: 8s anim-lineUp ease-out;
+}
+
+/* ------------------------------------------------------ */
+/* typewriter effect */
 .line-1 {
-    position: relative;
-    top: 50%;
-    width: 24em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 30px;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-60%);
+  position: relative;
+  top: 50%;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  font-size: 30px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-60%);
 }
 
 /* Animation */
 .anim-typewriter {
   animation: typewriter 5s steps(44) 1s 1 normal both,
-             blinkTextCursor 1000ms steps(44) infinite normal;
+    blinkTextCursor 1000ms steps(44) infinite normal;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 10em;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
-/* ------------------------------------------------------ */
 
-/* 시작회면 버튼들 */
-.myButton{
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 10em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* ------------------------------------------------------ */
+/* Buttons*/
+.myButton {
   text-align: center;
   margin-top: -5%;
   margin-bottom: 20%;
 }
 
+/* Click to define button */
 .button1 {
   border: 15px #FFFFFF;
   border-radius: 8px;
@@ -107,6 +138,7 @@ h3 {
   transform: translateY(-7px);
 }
 
+/* main page Buttons */
 .button2 {
   border: 15px #FFFFFF;
   border-radius: 8px;
@@ -127,7 +159,7 @@ h3 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  animation: 2s anim-lineUp ease-out;
+  animation: 15s anim-lineUp ease-out;
 }
 
 .button2:hover {
@@ -137,6 +169,7 @@ h3 {
   transform: translateY(-7px);
 }
 
+/* artist statement button */
 .button3 {
   border: 15px #FFFFFF;
   border-radius: 8px;
@@ -153,9 +186,6 @@ h3 {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin-top: 300px;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  animation: 2s anim-lineUp ease-out;
   margin-bottom: -300px;
   bottom: 0;
   -webkit-user-select: none;
@@ -175,29 +205,36 @@ h3 {
     opacity: 0;
     transform: translateY(80%);
   }
+
   20% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
     transform: translateY(0%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0%);
   }
 }
+
 /* -------------------------------------------------------------- */
 /* input style */
-
 #myForm {
-  margin-top: -150px;
+  margin-top: 100px;
   margin-bottom: 100px;
   font-size: 40px;
   font-family: 'Oswald', sans-serif;
   text-align: center;
   color: #ffffff;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  overflow: hidden;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  animation: 10s anim-lineUp ease-out;
+  /* Ensures the content is not revealed until the animation */
 }
 
 #allNames {
@@ -205,6 +242,7 @@ h3 {
   text-align: center;
   margin
 }
+
 #errorMessage {
   display: none;
   color: red;
@@ -228,7 +266,7 @@ h4 {
 /* message */
 h5 {
   margin: auto;
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Oswald', sans-serif;
   color: #ffffff;
   overflow: hidden;
@@ -236,94 +274,92 @@ h5 {
   margin-right: 200px;
   text-align: right;
   background-image: -webkit-linear-gradient(92deg, #d0c2d7, #E5E5E5);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   -webkit-animation: hue 30s infinite linear;
-   -webkit-user-select: none;
-   touch-action: manipulation;
-   animation: 13s anim-lineUp ease-out;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 30s infinite linear;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  animation: 13s anim-lineUp ease-out;
 }
 
 @-webkit-keyframes hue {
-    from {
-      -webkit-filter: hue-rotate(0deg);
-    }
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
 
-    to {
-      -webkit-filter: hue-rotate(360deg);
-    }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
 
+/* loader -not working? */
 #loader {
   margin: 60px auto;
-   width: 6px;
-   height: 6px;
-   -webkit-animation: line 1s linear infinite alternate;
+  width: 6px;
+  height: 6px;
+  -webkit-animation: line 1s linear infinite alternate;
   -moz-animation: line 1s linear infinite alternate;
   animation: line 1s linear infinite alternate;
 }
 
-@-webkit-keyframes line{
-    0%{
+@-webkit-keyframes line {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 0.2),
+      24px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
 
-        background-color: rgba(0,0,0, 1);
-        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),
-                    24px 0px 0px 0px rgba(0,0,0,0.2);
+  25% {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 2),
+      24px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
 
-      }
-    25%{
-            background-color: rgba(0,0,0, 0.4);
-            box-shadow: 12px 0px 0px 0px rgba(0,0,0,2),
-                    24px 0px 0px 0px rgba(0,0,0,0.2);
-
-    }
-    75%{ background-color: rgba(0,0,0, 0.4);
-        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),
-                    24px 0px 0px 0px rgba(0,0,0,2);
-
-      }
+  75% {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 0.2),
+      24px 0px 0px 0px rgba(0, 0, 0, 2);
+  }
 }
 
-@-moz-keyframes line{
-    0%{
+@-moz-keyframes line {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 0.2),
+      24px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
 
-        background-color: rgba(0,0,0, 1);
-        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),
-                    24px 0px 0px 0px rgba(0,0,0,0.2);
+  25% {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 2),
+      24px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
 
-      }
-    25%{
-            background-color: rgba(0,0,0, 0.4);
-            box-shadow: 12px 0px 0px 0px rgba(0,0,0,2),
-                    24px 0px 0px 0px rgba(0,0,0,0.2);
-
-    }
-    75%{ background-color: rgba(0,0,0, 0.4);
-        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),
-                    24px 0px 0px 0px rgba(0,0,0,2);
-
-      }
+  75% {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 0.2),
+      24px 0px 0px 0px rgba(0, 0, 0, 2);
+  }
 }
 
-@keyframes line{
-    0%{
+@keyframes line {
+  0% {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 0.2),
+      24px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
 
-        background-color: rgba(0,0,0, 1);
-        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),
-                    24px 0px 0px 0px rgba(0,0,0,0.2);
+  25% {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 2),
+      24px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
 
-      }
-    25%{
-            background-color: rgba(0,0,0, 0.4);
-            box-shadow: 12px 0px 0px 0px rgba(0,0,0,2),
-                    24px 0px 0px 0px rgba(0,0,0,0.2);
-
-    }
-    75%{ background-color: rgba(0,0,0, 0.4);
-        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),
-                    24px 0px 0px 0px rgba(0,0,0,2);
-
-      }
+  75% {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(0, 0, 0, 0.2),
+      24px 0px 0px 0px rgba(0, 0, 0, 2);
+  }
 }
 
 footer {
